@@ -56,15 +56,6 @@
       color: white;
       border-color: #8a568a;
     }
-
-    .list-group:empty::before {
-      content: "No tasks yet.";
-      display: block;
-      text-align: center;
-      padding: 20px;
-      color: gray;
-      font-style: italic;
-    }
   </style>
   </head>
   <body>
@@ -117,7 +108,7 @@
         navigator.serviceWorker
           .register("/service-worker.js")
           .then(() => {
-            console.log("ayos! rehistro as service worker");
+            console.log("Service worker registered");
           })
           .catch((error) => {
             console.log("Registration failed: ", error);
